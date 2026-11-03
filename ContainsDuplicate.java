@@ -1,0 +1,21 @@
+//LeetCode #26 – Remove Duplicates from Sorted Array
+
+//Remove duplicates from a sorted array in-place so that each unique element appears only once. 
+//Return the number of unique elements (k).
+
+class Solution {
+    public boolean containsDuplicate(int[] nums) 
+    {
+            for(int i =0 ; i<nums.length; i++)
+            {
+                for(int j = i+1 ; j<nums.length ; j++)
+                {
+                    if(nums[i] == nums[j])
+                    {
+                        return true;
+                    }
+                }
+            }    
+            return false;
+    }
+}
